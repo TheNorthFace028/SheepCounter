@@ -29,4 +29,36 @@ class MainTest {
         int something = Main.sheepCount(animals);
         assertEquals(2, something);
     }
+    @Test
+    void getAliveSheepCount(){
+
+        String[] animals = new String[] {"sheep", "duck", "wolf", "sheep"};
+        SheepCounter obj =new SheepCounter();
+        int total2=obj.getAliveSheepCount(animals);
+        assertEquals(1,total2);
+    }
+    @Test
+    void getAliveSheepCount1(){
+
+        String[] animals = new String[] {"sheep", "duck", "SwOlf", "sheep"};
+        SheepCounter obj =new SheepCounter();
+        int total2=obj.getAliveSheepCount(animals);
+        assertEquals(1,total2);
+    }
+    @Test
+    void getAliveSheepCount2(){
+
+        String[] animals = new String[] {"sheep", "duck", "Wf", "sheep"};
+        SheepCounter obj =new SheepCounter();
+        int total2=obj.getAliveSheepCount(animals);
+        assertEquals(1,total2);
+    }
+    @Test
+    void getAliveSheepCount3(){
+
+        String[] animals = new String[] {"sheep", "duck", "woLF", "sheep"};
+        SheepCounter obj =new SheepCounter();
+        int total2=obj.getAliveSheepCount(animals);
+        assertEquals(1,total2);
+    }
 }
